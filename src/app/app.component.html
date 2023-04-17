@@ -1,28 +1,29 @@
 <body>
 	<h1>Simple Calculator</h1>
   
-	<input type="number" id="calories" placeholder="Enter Intake">
-	<input type="submit" id="addBtn" value="Add to Total">
-	<h2 id="Total">Total</h2>
+	<p-inputNumber id="calories" placeholder="ENTER INTAKE"></p-inputNumber>
+	<p-button id="addBtn" label="ADD"></p-button>
+	<h2 id="Total">Total: 0</h2>
   </body>
   
   <script>
 	var total = 0; // variable to store the current total
-	
+  
 	// function to calculate total input
 	function calculateTotal() {
 	  // get value from user input
-	  var calories = Number(document.getElementById('calories').value);
-	  
+	  var calories = parseInt(document.getElementById('calories').value);
+  
 	  // add current input value to total
 	  total += calories;
-	  
+  
 	  // display updated total in the Total heading element
-	  document.getElementById('Total').innerHTML =  total;
+	  document.getElementById('Total').innerHTML = 'Total: ' + total;
 	}
-	
+  
 	// attach event listener to the Add button
 	document.getElementById('addBtn').addEventListener('click', calculateTotal);
   </script>
-
-<router-outlet></router-outlet>
+  
+  <router-outlet></router-outlet>
+  

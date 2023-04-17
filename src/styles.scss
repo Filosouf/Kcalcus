@@ -1,3 +1,7 @@
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
 /* black background, yellow text */
 body {
     background-color: black;
@@ -5,3 +9,16 @@ body {
     text-transform: uppercase;
   }
   
+// Position content to lower right side corner
+// of the screen
+// -------------------------------------------
+:root {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 20px;
+}
+
+// -------------------------------------------
+// Path: src\app\app.component.html
+// -------------------------------------------
