@@ -26,7 +26,7 @@ export class AppComponent {
     }
 
     // replace header total with new total
-    header.innerText = this.total.toString();
+    header.innerText = this.total;
   }
 
 }
