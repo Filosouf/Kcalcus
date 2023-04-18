@@ -11,7 +11,7 @@ export class AppComponent {
   //store total for later use
   total = 0;
 
-  onSave() {
+  onSave(): string {
 
     const input = document.getElementById('calories') as HTMLInputElement;
     const header = document.getElementById('Total') as HTMLElement;
