@@ -6,15 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'kcalcus';
+  public title = 'kcalcus';
   
   //store total for later use
-  total = 0;
+  public total = 0;
 
   onSave(): string {
 
-    const input = document.getElementById('calories') as HTMLInputElement;
-    const header = document.getElementById('Total') as HTMLElement;
+    let input = document.getElementById('calories') as HTMLInputElement;
+    let header = document.getElementById('Total') as HTMLElement;
     
 
     // if total is 0, set total to input value, else add input value to total
