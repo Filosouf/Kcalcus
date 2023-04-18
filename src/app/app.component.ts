@@ -23,24 +23,25 @@ export class AppComponent {
   }
 
   onSave(): void {
-    const inputValue = Number(this.input.value);
+  const inputValue = parseFloat(this.input.value);
 
-    // check if the input is a valid number
-    if (isNaN(inputValue)) {
-      alert('Please enter a valid number!');
-      return;
-    }
-
-    // if total is 0, set total to input value, else add input value to total
-    if (this.total === 0) {
-      this.total = inputValue;
-    } else {
-      this.total += inputValue;
-    }
-
-    // replace header total with new total
-    this.header.innerText = this.total.toString();
+  // check if the input is a valid number
+  if (isNaN(inputValue)) {
+    alert('Please enter a valid number!');
+    return;
   }
+
+  // if total is 0, set total to input value, else add input value to total
+  if (this.total === 0) {
+    this.total = inputValue;
+  } else {
+    this.total += inputValue;
+  }
+
+  // replace header total with new total
+  this.header.innerText = this.total.toString();
+}
+
 }
 
 
