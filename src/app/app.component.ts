@@ -11,7 +11,7 @@ export class AppComponent {
   //store total for later use
   public total = 0;
 
-  onSave(): string {
+  onSave(): any {
 
     let input = document.getElementById('calories') as HTMLInputElement;
     let header = document.getElementById('Total') as HTMLElement;
@@ -19,10 +19,10 @@ export class AppComponent {
 
     // if total is 0, set total to input value, else add input value to total
     if (this.total === 0) {
-      this.total = parseInt(input.value);
+      this.total = input.value;
     }
     else {
-      this.total += parseInt(input.value);
+      this.total += input.value;
     }
 
     // replace header total with new total
