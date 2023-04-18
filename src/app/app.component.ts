@@ -9,14 +9,12 @@ export class AppComponent {
   public title = 'kcalcus';
   
   //store total for later use
-  public total = 0;
+  public total: number = 0;
+  
+  private input: number = document.getElementById('calories') as HTMLInputElement;
+  private header: string = document.getElementById('Total') as HTMLElement;
 
-  onSave(): any {
-
-    let input = document.getElementById('calories') as HTMLInputElement;
-    let header = document.getElementById('Total') as HTMLElement;
-    
-
+  onSave(): number {
     // if total is 0, set total to input value, else add input value to total
     if (this.total === 0) {
       this.total = input.value;
