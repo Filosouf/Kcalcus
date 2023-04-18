@@ -11,20 +11,28 @@ export class AppComponent {
   //store total for later use
   public total: number = 0;
   
-  private input: number = document.getElementById('calories') as HTMLInputElement;
-  private header: string = document.getElementById('Total') as HTMLElement;
+  private input: HTMLInputElement;
+  private header: HTMLElement;
 
-  onSave(): number {
+  constructor() {
+    this.input = document.getElementById('calories') as HTMLInputElement;
+    this.header = document.getElementById('Total') as HTMLElement;
+  }
+
+  onSave(): void {
+    const inputValue = Number(this.input.value);
+
     // if total is 0, set total to input value, else add input value to total
     if (this.total === 0) {
-      this.total = input.value;
-    }
-    else {
-      this.total += input.value;
+      this.total = inputValue;
+    } else {
+      this.total += inputValue;
     }
 
     // replace header total with new total
-    header.innerText = this.total;
+    this.header.innerText = this.total.toString();
   }
+}
+
 
 }
