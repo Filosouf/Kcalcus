@@ -37,6 +37,10 @@ export class AppComponent {
   } else {
     this.total += inputValue;
   }
+  
+  // output debug information to the console
+  console.log(`Input value: ${inputValue}`);
+  console.log(`Current total: ${this.total}`);
 
   // replace header total with new total
   this.header.innerText = this.total.toString();
