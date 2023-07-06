@@ -1,7 +1,6 @@
-	<h1>Simple Calculator</h1>
-  
-	<p-inputNumber id="calories" placeholder="ENTER INTAKE"></p-inputNumber>
-	<p-button id="addBtn" label="ADD" ></p-button>
-	<h2 id="Total">Total: 0</h2>
-  
-  <router-outlet></router-outlet>
+<h1>Simple Calculator</h1>
+
+<input type="number" placeholder="First Intake" id="input">
+<button type="submit" (click)="add()">+</button>
+
+<h2 class="output">Total: {{ total }}</h2>

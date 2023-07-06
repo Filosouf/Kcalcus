@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'kcalcus';
+  total = 0;
+
+  add() {
+    const input = (<HTMLInputElement>document.getElementById("input")).value;
+    this.total += parseInt(input);
+  }
 }
